@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 const schema = new mongoose.Schema({
   name: String,
   avatar: String,
+  banner: String,
   title: String,
   // 类型
   categories: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Category' }],
@@ -18,6 +19,8 @@ const schema = new mongoose.Schema({
   skills: [{
     icon: String,
     name: String,
+    delay: String,
+    cost: String,
     description: String,
     tips: String
   }],

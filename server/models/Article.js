@@ -5,6 +5,8 @@ const schema = new mongoose.Schema({
   title: String,
   categories: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Category' }],
   body: String
+}, {
+  timestamps: true
 })
 
 // 将schema映射到一个MongoDB collection并定义这个文档的构成
