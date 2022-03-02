@@ -29,6 +29,7 @@ module.exports = app => {
   })
   // 资源列表
   router.get('/', async (req, res) => {
+    // populate:关联查询，由字符串_id变成一个完整的对象
     // const items = await req.Model.find().populate('parent').limit(10)
     const queryOptions = {}
     if (req.Model.modelName === 'Category') {
@@ -70,7 +71,7 @@ module.exports = app => {
     const user = await AdminUser.findOne({
       // username: username
       username
-    }).select('+password')  //select: false
+    }).select('+password')  //select: false  // + 被强制选择
     assert(user, 422, '用户不存在')
     // if(!user) {
     //   return res.status(422).send({

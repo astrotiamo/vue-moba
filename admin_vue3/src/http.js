@@ -1,6 +1,7 @@
 import axios from 'axios'
 // import Vue from 'vue'
 import router from './router/index'
+import app from './main'
 
 const http = axios.create({
   baseURL: process.env.VUE_APP_API_URL || '/admin/api',
@@ -25,6 +26,10 @@ http.interceptors.response.use(res => {
     //   type: 'error',
     //   message: err.response.data.message
     // })
+    app.config.globalProperties.$message({
+      type: 'error',
+      message: err.response.data.message
+    })
     if(err.response.status === 401) {
       router.push('/login')
     }

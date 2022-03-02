@@ -1,25 +1,25 @@
 // import Vue from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Login from '../views/Login.vue'
-import Main from '../views/Main.vue'
+const Login = () => import('../views/Login.vue')
+const Main = () => import('../views/Main.vue')
 
-import CategoryEdit from '../views/CategoryEdit.vue'
-import CategoryList from '../views/CategoryList.vue'
+const CategoryEdit = () => import('../views/CategoryEdit.vue')
+const CategoryList = () => import('../views/CategoryList.vue')
 
-import ItemEdit from '../views/ItemEdit.vue'
-import ItemList from '../views/ItemList.vue'
+const ItemEdit = () => import('../views/ItemEdit.vue')
+const ItemList = () => import('../views/ItemList.vue')
 
-import HeroEdit from '../views/HeroEdit.vue'
-import HeroList from '../views/HeroList.vue'
+const HeroEdit = () => import('../views/HeroEdit.vue')
+const HeroList = () => import('../views/HeroList.vue')
 
-import ArticleEdit from '../views/ArticleEdit.vue'
-import ArticleList from '../views/ArticleList.vue'
+const ArticleEdit = () => import('../views/ArticleEdit.vue')
+const ArticleList = () => import('../views/ArticleList.vue')
 
-import AdEdit from '../views/AdEdit.vue'
-import AdList from '../views/AdList.vue'
+const AdEdit = () => import('../views/AdEdit.vue')
+const AdList = () => import('../views/AdList.vue')
 
-import AdminUserEdit from '../views/AdminUserEdit.vue'
-import AdminUserList from '../views/AdminUserList.vue'
+const AdminUserEdit = () => import('../views/AdminUserEdit.vue')
+const AdminUserList = () => import('../views/AdminUserList.vue')
 
 // Vue.use(VueRouter)
 
